@@ -1,0 +1,15 @@
+spin_manifest_version = "1"
+authors = ["Jan Piotrowski <piotrowski+github@gmail.com>"]
+description = ""
+name = "spin-prisma"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "spin-prisma"
+source = "target/spin-prisma.wasm"
+exclude_files = ["**/node_modules"]
+[component.trigger]
+route = "/..."
+[component.build]
+command = "npm run build"
